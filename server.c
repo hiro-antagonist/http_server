@@ -113,7 +113,7 @@ int main() {
 
     while (1) {
         // Accept client connections
-        client_socket = malloc(sizeof(int));
+        client_socket = malloc(sizeof(int));//is this needed?
         *client_socket = accept(server_socket, (struct sockaddr *)&client_addr, &client_addr_len);
         if (*client_socket < 0) {
             perror("accept");
